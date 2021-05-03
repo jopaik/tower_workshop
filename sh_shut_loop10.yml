@@ -4,11 +4,11 @@
   connection: network_cli
   gather_facts: no
 
-
-- name: Shutdown flapping interface
-  ios_interfaces:
-    config:
-      - name: Loopbback10
-        description: 'Configured and Merged by Ansible for Self Healing Demo'
-        enabled: False
-    state: merged
+  tasks:
+    - name: Shutdown flapping interface
+      ios_interfaces:
+        config:
+          - name: Loopback10
+            description: 'Configured and Merged by Ansible for Self Healing Demo'
+            enabled: False
+        state: merged
