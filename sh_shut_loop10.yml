@@ -1,0 +1,14 @@
+---
+- name: Shutdown Flapping Interface
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+
+- name: Shutdown flapping interface
+  ios_interfaces:
+    config:
+      - name: Loopbback10
+        description: 'Configured and Merged by Ansible for Self Healing Demo'
+        enabled: False
+    state: merged
