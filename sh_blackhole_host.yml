@@ -1,0 +1,13 @@
+---
+- name: Blackhole Host
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    bh_host: 192.168.100.100
+    
+  tasks:
+    - name: Blackhole Host
+      ios_config:
+        lines: "ip route {{ bh_host }} 255.255.255.255 null 0"
