@@ -7,4 +7,5 @@
 
     - name: List ALL Interfaces
       debug:
-        msg: "{{ ansible_net_interfaces }}"
+        msg: "{{ item.key }}"
+      with_dict: "{{ ansible_net_interfaces }}"
