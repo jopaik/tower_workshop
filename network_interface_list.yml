@@ -7,4 +7,4 @@
 
     - name: List Interfaces
       debug:
-        var: ansible_net_interfaces
+        var: ansible_net_interfaces[0]
