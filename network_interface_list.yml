@@ -5,6 +5,6 @@
 
   tasks:
 
-    - name: List Interfaces
+    - name: List ALL Interfaces
       debug:
-        var: ansible_net_interfaces[0]
+        msg: "{{ ansible_net_interfaces }}"
