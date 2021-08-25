@@ -1,0 +1,10 @@
+---
+- name: Network Interface List
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+
+    - name: List Interfaces
+      debug:
+        var: ansible_net_interfaces
