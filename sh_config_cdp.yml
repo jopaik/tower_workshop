@@ -12,5 +12,5 @@
     - name: Configure CDP on Interfaces
       ios_config:
         lines:
-          - cdp enable
-        partents: interface GigabitEthernet1
+          - "cdp enable"
+        parents: interface GigabitEthernet1
