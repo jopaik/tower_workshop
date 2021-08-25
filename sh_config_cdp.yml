@@ -1,0 +1,16 @@
+---
+- name: Configure CDP
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Configure Global CDP
+      ios_config:
+        lines: "cdp run"
+
+    - name: Configure CDP on Interfaces
+      ios_config:
+        lines:
+          - cdp enable
+        partents: interface GigabitEthernet1
