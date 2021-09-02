@@ -4,6 +4,9 @@
   connection: network_cli
   gather_facts: no
 
+  vars:
+    cdp_interface: GigabitEthernet1
+
   tasks:
     - name: Configure Global CDP
       ios_config:
@@ -13,4 +16,5 @@
       ios_config:
         lines:
           - "cdp enable"
-        parents: interface GigabitEthernet1
+          - "description CDP_enabled_by_Ansible_Self_healing_demo"
+        parents: "interface {{ cdp_interface }}"
