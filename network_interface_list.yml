@@ -1,0 +1,13 @@
+---
+- name: Network Interface List
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: get IOS facts
+      ios_facts:
+
+    - name: List ALL Interfaces
+      debug:
+        var: item.key
+      with_dict: "{{ ansible_net_interfaces }}"

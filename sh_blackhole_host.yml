@@ -6,8 +6,8 @@
 
   vars:
     bh_host: 192.168.100.100
-    
+
   tasks:
-    - name: Blackhole Host
+    - name: Quarantine-Blackhole Host
       ios_config:
-        lines: "ip route {{ bh_host }} 255.255.255.255 null 0"
+        lines: "ip route {{ bh_host }} 255.255.255.255 null 0 name quarantined_by_Ansible_Automation_Self_Healing_demo"

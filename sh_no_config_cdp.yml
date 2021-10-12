@@ -1,0 +1,19 @@
+---
+- name: Configure CDP
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+  vars:
+    cdp_interface: GigabitEthernet1
+
+  tasks:
+    - name: Configure Global CDP
+      ios_config:
+        lines: "no cdp run"
+
+    - name: Configure CDP on Interfaces
+      ios_config:
+        lines:
+          - "no cdp enable"
+          - "description Managed_by_Ansible_Self_Healing_Demo"
+        parents: "interface {{ cdp_interface }}"
