@@ -15,3 +15,4 @@
           - process_id: 1
             max_metric:
               router_lsa: false
+        state: merged
