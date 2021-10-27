@@ -1,0 +1,17 @@
+---
+- name: Configure OSPF Max Metric
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    ospf_id: 1
+
+  tasks:
+    - name: Merge provided OSPF V2 configuration
+      cisco.ios.ios_ospfv2:
+        config:
+          processes:
+          - process_id: 1
+            max_metric:
+              router_lsa: true
