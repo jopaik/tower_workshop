@@ -1,0 +1,14 @@
+211011182150.036 INFO 'ansible_navigator.setup_logger' New ansible-navigator instance, logging initialized
+211011182150.036 INFO 'ansible_navigator.setup_logger' New ansible-runner instance, logging initialized
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/usr/local/lib/python3.9/site-packages/share/ansible_navigator' not found (development path)
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/Users/joonpaik/Library/Python/3.9/share/ansible_navigator' not found (userbase)
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/share/ansible_navigator' not found (sys.prefix)
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/usr/local/opt/python@3.9/share/ansible_navigator' not found (datarootdir)
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/share/ansible_navigator' not found (datadir)
+211011182150.036 DEBUG 'ansible_navigator.main' Share directory '/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/local/share/ansible_navigator' not found (prefix)
+211011182150.036 DEBUG 'ansible_navigator.main' Default collection_doc_cache_path set to: /Users/joonpaik/.cache/ansible-navigator/collection_doc_cache.db
+211011182150.036 DEBUG 'ansible_navigator.main' EDITOR environment variable not set
+211011182150.036 DEBUG 'ansible_navigator.main' Default editor_command set to: vi +{line_number} {filename}
+211011182150.037 ERROR 'ansible_navigator.main' Unable to find a viable share directory
+211011182150.037 ERROR 'ansible_navigator.main' Configuration failed, using default log file location: /Users/joonpaik/git/joon/tower_workshop/apifiles/ansible-navigator.log. Log level set to debug
+211011182150.037 INFO 'ansible_navigator.main' Review the hints and log file to see what went wrong: /Users/joonpaik/git/joon/tower_workshop/apifiles/ansible-navigator.log
