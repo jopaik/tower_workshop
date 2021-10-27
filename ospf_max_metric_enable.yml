@@ -8,7 +8,7 @@
     ospf_id: 1
 
   tasks:
-    - name: Merge provided OSPF V2 configuration
+    - name: add ospf max metric
       cisco.ios.ios_ospfv2:
         config:
           processes:
