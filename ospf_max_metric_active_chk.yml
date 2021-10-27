@@ -1,0 +1,16 @@
+---
+- name: Check OSPF Max Metric is Active
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    ospf_id: 1
+
+  tasks:
+    - name: Check OSPF Max Metric is Active
+      cisco.ios.ios_command:
+        commands:
+          - show ip ospf max-metric
+        wait_for:
+          - result[0] contains active

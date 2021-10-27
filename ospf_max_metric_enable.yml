@@ -1,5 +1,5 @@
 ---
-- name: Configure OSPF Max Metric
+- name: Enable OSPF Max Metric
   hosts: all
   connection: network_cli
   gather_facts: no

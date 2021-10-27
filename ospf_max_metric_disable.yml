@@ -1,5 +1,5 @@
 ---
-- name: Configure OSPF Max Metric
+- name: Disable OSPF Max Metric
   hosts: all
   connection: network_cli
   gather_facts: no
@@ -9,7 +9,7 @@
 
   tasks:
     - name: Remove ospf max metric
-      ios_config:
+      cisco.ios.ios_config:
         lines:
           - "no max-metric router-lsa"
         parents: "router ospf {{ ospf_id}}"
