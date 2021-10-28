@@ -1,0 +1,718 @@
+{
+     "inventory": [
+          {
+               "name": "Workshop Inventory",
+               "description": "",
+               "kind": "",
+               "host_filter": null,
+               "variables": "",
+               "organization": {
+                    "name": "Default",
+                    "type": "organization"
+               },
+               "related": {
+                    "hosts": [
+                         {
+                              "name": "ansible-1",
+                              "description": "imported",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"ansible_host\": \"3.239.208.255\", \"ansible_password\": \"QcGrwYAijjRCoE\", \"ansible_user\": \"student1\", \"private_ip\": \"172.16.226.115\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": [
+                                        {
+                                             "name": "control",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "ansible-1",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         },
+                         {
+                              "name": "backup-server",
+                              "description": "this server is where we backup network configuration",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"note\": \"in production these passwords would be encrypted in vault\", \"ansible_user\": \"student1\", \"ansible_password\": \"QcGrwYAijjRCoE\", \"ansible_host\": \"3.239.208.255\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": []
+                              },
+                              "natural_key": {
+                                   "name": "backup-server",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         },
+                         {
+                              "name": "rtr1",
+                              "description": "imported",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"ansible_host\": \"44.195.36.211\", \"private_ip\": \"172.16.96.0\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": [
+                                        {
+                                             "name": "cisco",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "dc1",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "rtr1",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         },
+                         {
+                              "name": "rtr2",
+                              "description": "imported",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"ansible_host\": \"44.197.193.237\", \"private_ip\": \"172.18.103.236\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": [
+                                        {
+                                             "name": "arista",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "dc2",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "rtr2",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         },
+                         {
+                              "name": "rtr3",
+                              "description": "imported",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"ansible_host\": \"18.209.231.205\", \"private_ip\": \"172.16.166.207\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": [
+                                        {
+                                             "name": "dc1",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "juniper",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "rtr3",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         },
+                         {
+                              "name": "rtr4",
+                              "description": "imported",
+                              "enabled": true,
+                              "instance_id": "",
+                              "variables": "{\"ansible_host\": \"44.198.166.111\", \"private_ip\": \"172.18.66.49\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "groups": [
+                                        {
+                                             "name": "arista",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "dc2",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "rtr4",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "host"
+                              }
+                         }
+                    ],
+                    "groups": [
+                         {
+                              "name": "arista",
+                              "description": "imported",
+                              "variables": "{\"ansible_become\": \"true\", \"ansible_become_method\": \"enable\", \"ansible_connection\": \"network_cli\", \"ansible_network_os\": \"eos\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "rtr2",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        },
+                                        {
+                                             "name": "rtr4",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "arista",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "cisco",
+                              "description": "imported",
+                              "variables": "{\"ansible_connection\": \"network_cli\", \"ansible_network_os\": \"ios\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "rtr1",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "cisco",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "control",
+                              "description": "imported",
+                              "variables": "{}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "ansible-1",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "control",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "dc1",
+                              "description": "imported",
+                              "variables": "{}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "rtr1",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        },
+                                        {
+                                             "name": "rtr3",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "dc1",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "dc2",
+                              "description": "imported",
+                              "variables": "{}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "rtr2",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        },
+                                        {
+                                             "name": "rtr4",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "dc2",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "juniper",
+                              "description": "imported",
+                              "variables": "{\"ansible_connection\": \"netconf\", \"ansible_network_os\": \"junos\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [
+                                        {
+                                             "name": "rtr3",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "host"
+                                        }
+                                   ],
+                                   "children": []
+                              },
+                              "natural_key": {
+                                   "name": "juniper",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "network",
+                              "description": "imported",
+                              "variables": "{\"restore_credential\": \"Workshop Credential\", \"restore_inventory\": \"Workshop Inventory\", \"restore_project\": \"Workshop Project\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [],
+                                   "children": [
+                                        {
+                                             "name": "routers",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "network",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         },
+                         {
+                              "name": "routers",
+                              "description": "imported",
+                              "variables": "{\"ansible_user\": \"ec2-user\"}",
+                              "inventory": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Workshop Inventory",
+                                   "type": "inventory"
+                              },
+                              "related": {
+                                   "hosts": [],
+                                   "children": [
+                                        {
+                                             "name": "arista",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "cisco",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        },
+                                        {
+                                             "name": "juniper",
+                                             "inventory": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Workshop Inventory",
+                                                  "type": "inventory"
+                                             },
+                                             "type": "group"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "name": "routers",
+                                   "inventory": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Workshop Inventory",
+                                        "type": "inventory"
+                                   },
+                                   "type": "group"
+                              }
+                         }
+                    ]
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               }
+          }
+     ]
+}

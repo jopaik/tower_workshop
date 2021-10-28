@@ -1,0 +1,688 @@
+{
+     "job_templates": [
+          {
+               "name": "Network Automation - Restore",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_restore.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": true,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Yuji Network Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {
+                         "name": "Restore Survey",
+                         "description": "Choose which date you want to restore to",
+                         "spec": [
+                              {
+                                   "type": "multiplechoice",
+                                   "question_name": "Rollback to which date?",
+                                   "question_description": "Rollback revision date, which date do you want to revert to?",
+                                   "variable": "rollback_date",
+                                   "choices": [
+                                        "2021-10-26-16-26",
+                                        "2021-10-26-17-12"
+                                   ],
+                                   "required": true,
+                                   "default": "2021-10-26-16-26"
+                              }
+                         ]
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Network Automation - Restore",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Commands",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_commands.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": true,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Yuji Network Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {
+                         "name": "Network Operator Commands",
+                         "description": "Restricted list of commands executable by operator",
+                         "spec": [
+                              {
+                                   "type": "multiplechoice",
+                                   "question_name": "Select a command you would like to execute",
+                                   "question_description": "Select a command you would like to execute",
+                                   "variable": "tower_input",
+                                   "required": true,
+                                   "default": "show version",
+                                   "choices": [
+                                        "show ip interface brief",
+                                        "show interface description",
+                                        "show ip route",
+                                        "show version"
+                                   ]
+                              }
+                         ]
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Network-Commands",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Reload",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_reload.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Yuji Network Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Network-Reload",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-System",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_system.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Network-System",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Time",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_time.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Network-Time",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-User",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_user.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": true,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {
+                         "name": "System Survey",
+                         "description": "Prompt for system propertires such as hostname",
+                         "spec": [
+                              {
+                                   "type": "text",
+                                   "question_name": "Please enter the username",
+                                   "question_description": "this will set the username on the network device",
+                                   "variable": "network_name",
+                                   "required": false,
+                                   "default": "ansible"
+                              },
+                              {
+                                   "type": "text",
+                                   "question_name": "Please enter the plain-text password",
+                                   "question_description": "this is not required if using an SSH key",
+                                   "variable": "network_configured_password",
+                                   "required": false,
+                                   "default": "ansible123"
+                              },
+                              {
+                                   "type": "textarea",
+                                   "question_name": "Please paste the SSH public key here",
+                                   "question_description": "this is not required, please leave blank to use plain-text password",
+                                   "variable": "network_key",
+                                   "required": false,
+                                   "default": ""
+                              },
+                              {
+                                   "type": "text",
+                                   "question_name": "Please enter a privilege level (for network OS that support it)",
+                                   "question_description": "This argument accepts integer values in the range of 1 to 15",
+                                   "variable": "network_privilege",
+                                   "required": false,
+                                   "default": ""
+                              },
+                              {
+                                   "question_description": "non-Juniper devices will ignore this field",
+                                   "min": null,
+                                   "default": "super-user",
+                                   "max": null,
+                                   "required": false,
+                                   "choices": "operator\nread-only\nsuper-user\nunauthorized",
+                                   "variable": "network_juniper_class",
+                                   "question_name": "Which login class? (Juniper only)",
+                                   "type": "multiplechoice"
+                              }
+                         ]
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Network-User",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Yuji Network-Commands",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_commands.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": true,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Yuji Network Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {
+                         "name": "Network Operator Commands",
+                         "description": "Restricted list of commands executable by operator",
+                         "spec": [
+                              {
+                                   "type": "multiplechoice",
+                                   "question_name": "Select a command you would like to execute",
+                                   "question_description": "Select a command you would like to execute",
+                                   "variable": "tower_input",
+                                   "required": true,
+                                   "default": "show version",
+                                   "choices": [
+                                        "show ip interface brief",
+                                        "show interface description",
+                                        "show ip route",
+                                        "show version"
+                                   ]
+                              }
+                         ]
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Yuji Network-Commands",
+                    "type": "job_template"
+               }
+          }
+     ]
+}
