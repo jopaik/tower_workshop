@@ -1,0 +1,14 @@
+---
+- name: Compare Startup to Running config
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+
+  tasks:
+    - name: check the startup-config against the running-config
+      cisco.ios.ios_config:
+        diff_against: startup
+        diff_ignore_lines:
+        - ntp clock .*
