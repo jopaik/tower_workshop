@@ -16,17 +16,17 @@
           - "{{ insert_num }} {{ acl_config }}"
         parents: "ip access-list extended {{ acl_name }}"
 
-    - name: Resquence IP ACL extended
-      cisco.ios.ios_config:
-        lines:
-          - "ip access-list resequence {{ acl_config }} 10 10"
+    # - name: Resquence IP ACL extended
+    #   cisco.ios.ios_config:
+    #     lines:
+    #       - "ip access-list resequence {{ acl_config }} 10 10"
 
     - name: Check OSPF Max Metric is Active
       cisco.ios.ios_command:
         commands:
-          - show ip access-list "{{ acl_name }}"
+          - "show ip access-list {{ acl_name }}"
       register: output
 
     - name: Output acl results
       debug:
-        msg: "{{ output }}"  
+        msg: "{{ output }}"
