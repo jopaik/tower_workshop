@@ -1,0 +1,16 @@
+---
+- name: Check OSPF Max Metric Ping IP
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    ping_ip: 1
+
+  tasks:
+    - name: Check IP is pingable
+      cisco.ios.ios_command:
+        commands:
+          - "ping {{ ping_ip }} repeat 2"
+        wait_for:
+          - result[0] contains !
