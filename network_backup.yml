@@ -36,8 +36,8 @@
     - name: Set stat last_backup
       set_stats:
         data:
-          last_backup: "{{ datetime }}"
-          
+          last_backup: "{{ hostvars['backup-server'].datetime }}"
+
     - name: save configuration to backup server
       copy:
         src: "{{ config_output.backup_path }}"
