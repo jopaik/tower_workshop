@@ -8,6 +8,11 @@
       set_fact:
         datetime: "{{ lookup('pipe','date +%Y-%m-%d-%H-%M') }}"
 
+    - name: set stat for restore
+      set_stats:
+        data:
+          last_backup: "{{ datetime }}"  
+
     - name: create /backup directory on control node
       file:
         path: /backup
