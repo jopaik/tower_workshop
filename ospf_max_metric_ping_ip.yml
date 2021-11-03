@@ -5,7 +5,7 @@
   gather_facts: no
 
   vars:
-    ping_ip: 1
+    ping_ip: 192.168.1.1
 
   tasks:
     - name: Check IP is pingable
