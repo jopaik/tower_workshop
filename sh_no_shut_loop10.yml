@@ -6,12 +6,12 @@
 
   vars:
     flap_interface: Loopback10
-
+    int_desc: "Configured and Merged by Ansible Automation for Self Healing Demo"
   tasks:
     - name: Enable flapping interface
       ios_interfaces:
         config:
           - name: "{{ flap_interface }}"
-            description: 'Configured and Merged by Ansible Automation for Self Healing Demo'
+            description: "{{ int_desc }}"
             enabled: True
         state: merged
