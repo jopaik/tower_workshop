@@ -60,7 +60,7 @@
         playbook: "{{ restores_playbook|default('playbooks/network_restore.yml') }}"
         credential: "{{ restore_credential|default('Network Credential') }}"
         extra_vars:
-          - rollback_date: "{{ hostvars['backup-server'].datetime }}"
+          rollback_date: "2021-11-03-16-03"
         validate_certs: no
       run_once: true
 
