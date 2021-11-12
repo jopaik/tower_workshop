@@ -1,0 +1,282 @@
+{
+     "workflow_job_templates": [
+          {
+               "name": "Backup-Restore-task-failure",
+               "description": "",
+               "extra_vars": "---",
+               "organization": null,
+               "survey_enabled": false,
+               "allow_simultaneous": false,
+               "ask_variables_on_launch": false,
+               "inventory": null,
+               "limit": null,
+               "scm_branch": "",
+               "ask_inventory_on_launch": false,
+               "ask_scm_branch_on_launch": false,
+               "ask_limit_on_launch": false,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "related": {
+                    "schedules": [],
+                    "workflow_nodes": [
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "a835c8ff-9d9d-4a39-8abd-eb5243e88472",
+                              "workflow_job_template": {
+                                   "organization": null,
+                                   "name": "Backup-Restore-task-failure",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Int_desc_before",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": null,
+                                                  "name": "Backup-Restore-task-failure",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "cb32799f-8a9d-4cab-b0a7-54f3aefcd8b6",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": null,
+                                        "name": "Backup-Restore-task-failure",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "a835c8ff-9d9d-4a39-8abd-eb5243e88472",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "cb32799f-8a9d-4cab-b0a7-54f3aefcd8b6",
+                              "workflow_job_template": {
+                                   "organization": null,
+                                   "name": "Backup-Restore-task-failure",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Network-Backup-Nosurvey",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": null,
+                                                  "name": "Backup-Restore-task-failure",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "67e780a3-79c2-4089-a175-8a532ec838c3",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": null,
+                                        "name": "Backup-Restore-task-failure",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "cb32799f-8a9d-4cab-b0a7-54f3aefcd8b6",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "e9843e48-d970-4cf1-b5ba-6f775c2ee2b7",
+                              "workflow_job_template": {
+                                   "organization": null,
+                                   "name": "Backup-Restore-task-failure",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Int_desc_failure",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": null,
+                                                  "name": "Backup-Restore-task-failure",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "d54e3a23-d45f-40f5-9aef-67053c134d1f",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": null,
+                                        "name": "Backup-Restore-task-failure",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "e9843e48-d970-4cf1-b5ba-6f775c2ee2b7",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "67e780a3-79c2-4089-a175-8a532ec838c3",
+                              "workflow_job_template": {
+                                   "organization": null,
+                                   "name": "Backup-Restore-task-failure",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Int_desc_during",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": null,
+                                                  "name": "Backup-Restore-task-failure",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "e9843e48-d970-4cf1-b5ba-6f775c2ee2b7",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": null,
+                                        "name": "Backup-Restore-task-failure",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "67e780a3-79c2-4089-a175-8a532ec838c3",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "d54e3a23-d45f-40f5-9aef-67053c134d1f",
+                              "workflow_job_template": {
+                                   "organization": null,
+                                   "name": "Backup-Restore-task-failure",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Red Hat network organization",
+                                        "type": "organization"
+                                   },
+                                   "name": "Network-Restore-noSurvey",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": null,
+                                        "name": "Backup-Restore-task-failure",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "d54e3a23-d45f-40f5-9aef-67053c134d1f",
+                                   "type": "workflow_job_template_node"
+                              }
+                         }
+                    ],
+                    "labels": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "notification_templates_approvals": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": null,
+                    "name": "Backup-Restore-task-failure",
+                    "type": "workflow_job_template"
+               }
+          }
+     ]
+}

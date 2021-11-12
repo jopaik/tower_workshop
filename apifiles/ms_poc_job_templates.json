@@ -1,15 +1,15 @@
 {
      "job_templates": [
           {
-               "name": "Network Automation - Restore",
+               "name": "Int_desc_before",
                "description": "",
                "job_type": "run",
-               "playbook": "playbooks/network_restore.yml",
+               "playbook": "sh_no_shut_loop10.yml",
                "scm_branch": "",
                "forks": 0,
-               "limit": "",
+               "limit": "cisco",
                "verbosity": 0,
-               "extra_vars": "---",
+               "extra_vars": "---\nint_desc: \"Workflow Before Backup\"",
                "job_tags": "",
                "force_handlers": false,
                "skip_tags": "",
@@ -28,7 +28,7 @@
                "ask_verbosity_on_launch": false,
                "ask_inventory_on_launch": false,
                "ask_credential_on_launch": false,
-               "survey_enabled": true,
+               "survey_enabled": false,
                "become_enabled": false,
                "diff_mode": false,
                "allow_simultaneous": false,
@@ -48,7 +48,7 @@
                          "name": "Default",
                          "type": "organization"
                     },
-                    "name": "Yuji Network Project",
+                    "name": "jp project",
                     "type": "project"
                },
                "related": {
@@ -72,39 +72,174 @@
                     "notification_templates_started": [],
                     "notification_templates_success": [],
                     "notification_templates_error": [],
-                    "survey_spec": {
-                         "name": "Restore Survey",
-                         "description": "Choose which date you want to restore to",
-                         "spec": [
-                              {
-                                   "type": "multiplechoice",
-                                   "question_name": "Rollback to which date?",
-                                   "question_description": "Rollback revision date, which date do you want to revert to?",
-                                   "variable": "rollback_date",
-                                   "choices": [
-                                        "2021-10-26-16-26",
-                                        "2021-10-26-17-12"
-                                   ],
-                                   "required": true,
-                                   "default": "2021-10-26-16-26"
-                              }
-                         ]
-                    }
+                    "survey_spec": {}
                },
                "natural_key": {
                     "organization": {
                          "name": "Default",
                          "type": "organization"
                     },
-                    "name": "Network Automation - Restore",
+                    "name": "Int_desc_before",
                     "type": "job_template"
                }
           },
           {
-               "name": "Network-Commands",
+               "name": "Int_desc_during",
                "description": "",
                "job_type": "run",
-               "playbook": "playbooks/network_commands.yml",
+               "playbook": "sh_no_shut_loop10.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---\nint_desc: \"Workflow During Backup\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Int_desc_during",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Int_desc_failure",
+               "description": "",
+               "job_type": "run",
+               "playbook": "sh_no_shut_loop10.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---\nint_desc: \"Workflow failure\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Int_desc_failure",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "IP_Acl_Survey",
+               "description": "",
+               "job_type": "run",
+               "playbook": "ip_acl_add.yml",
                "scm_branch": "",
                "forks": 0,
                "limit": "cisco",
@@ -148,7 +283,227 @@
                          "name": "Default",
                          "type": "organization"
                     },
-                    "name": "Yuji Network Project",
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {
+                         "name": "",
+                         "description": "",
+                         "spec": [
+                              {
+                                   "question_name": "ACL Name",
+                                   "question_description": "",
+                                   "required": true,
+                                   "type": "text",
+                                   "variable": "acl_name",
+                                   "min": 0,
+                                   "max": 1024,
+                                   "default": "test",
+                                   "choices": "",
+                                   "new_question": true
+                              },
+                              {
+                                   "question_name": "Insert Number",
+                                   "question_description": "",
+                                   "required": true,
+                                   "type": "text",
+                                   "variable": "insert_num",
+                                   "min": 0,
+                                   "max": 1024,
+                                   "default": "15",
+                                   "choices": "",
+                                   "new_question": true
+                              },
+                              {
+                                   "question_name": "ACL Configuration",
+                                   "question_description": "",
+                                   "required": true,
+                                   "type": "text",
+                                   "variable": "acl_config",
+                                   "min": 0,
+                                   "max": 1024,
+                                   "default": "permit ip host 192.0.99.99 any log",
+                                   "choices": "",
+                                   "new_question": true
+                              }
+                         ]
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "IP_Acl_Survey",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Backup-Nosurvey",
+               "description": "",
+               "job_type": "run",
+               "playbook": "network_backup_aap.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Controller Credential",
+                              "credential_type": {
+                                   "name": "Red Hat Ansible Automation Platform",
+                                   "kind": "cloud",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         },
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Network-Backup-Nosurvey",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Commands",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_commands.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": true,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
                     "type": "project"
                },
                "related": {
@@ -195,7 +550,7 @@
                },
                "natural_key": {
                     "organization": {
-                         "name": "Default",
+                         "name": "Red Hat network organization",
                          "type": "organization"
                     },
                     "name": "Network-Commands",
@@ -211,7 +566,7 @@
                "forks": 0,
                "limit": "",
                "verbosity": 0,
-               "extra_vars": "---",
+               "extra_vars": "",
                "job_tags": "",
                "force_handlers": false,
                "skip_tags": "",
@@ -247,10 +602,10 @@
                },
                "project": {
                     "organization": {
-                         "name": "Default",
+                         "name": "Red Hat network organization",
                          "type": "organization"
                     },
-                    "name": "Yuji Network Project",
+                    "name": "Workshop Project",
                     "type": "project"
                },
                "related": {
@@ -278,10 +633,176 @@
                },
                "natural_key": {
                     "organization": {
-                         "name": "Default",
+                         "name": "Red Hat network organization",
                          "type": "organization"
                     },
                     "name": "Network-Reload",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Report",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_report.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Network-Report",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Network-Restore-noSurvey",
+               "description": "",
+               "job_type": "run",
+               "playbook": "playbooks/network_restore.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "{\"rollback_date\": \"2021-11-11-22-07\"}",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Network-Restore-noSurvey",
                     "type": "job_template"
                }
           },
@@ -583,10 +1104,10 @@
                }
           },
           {
-               "name": "Yuji Network-Commands",
+               "name": "Ospf_Max_Metric_Active",
                "description": "",
                "job_type": "run",
-               "playbook": "playbooks/network_commands.yml",
+               "playbook": "ospf_max_metric_active_chk.yml",
                "scm_branch": "",
                "forks": 0,
                "limit": "cisco",
@@ -610,7 +1131,7 @@
                "ask_verbosity_on_launch": false,
                "ask_inventory_on_launch": false,
                "ask_credential_on_launch": false,
-               "survey_enabled": true,
+               "survey_enabled": false,
                "become_enabled": false,
                "diff_mode": false,
                "allow_simultaneous": false,
@@ -630,7 +1151,7 @@
                          "name": "Default",
                          "type": "organization"
                     },
-                    "name": "Yuji Network Project",
+                    "name": "jp project",
                     "type": "project"
                },
                "related": {
@@ -654,33 +1175,180 @@
                     "notification_templates_started": [],
                     "notification_templates_success": [],
                     "notification_templates_error": [],
-                    "survey_spec": {
-                         "name": "Network Operator Commands",
-                         "description": "Restricted list of commands executable by operator",
-                         "spec": [
-                              {
-                                   "type": "multiplechoice",
-                                   "question_name": "Select a command you would like to execute",
-                                   "question_description": "Select a command you would like to execute",
-                                   "variable": "tower_input",
-                                   "required": true,
-                                   "default": "show version",
-                                   "choices": [
-                                        "show ip interface brief",
-                                        "show interface description",
-                                        "show ip route",
-                                        "show version"
-                                   ]
-                              }
-                         ]
-                    }
+                    "survey_spec": {}
                },
                "natural_key": {
                     "organization": {
                          "name": "Default",
                          "type": "organization"
                     },
-                    "name": "Yuji Network-Commands",
+                    "name": "Ospf_Max_Metric_Active",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Ospf_Max_metric_Disable",
+               "description": "",
+               "job_type": "run",
+               "playbook": "ospf_max_metric_disable.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Ospf_Max_metric_Disable",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Ospf_Max_Metric_Enable",
+               "description": "",
+               "job_type": "run",
+               "playbook": "ospf_max_metric_enable.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "cisco",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "execution_environment": null,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "jp project",
+                    "type": "project"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credential",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Ospf_Max_Metric_Enable",
                     "type": "job_template"
                }
           }
