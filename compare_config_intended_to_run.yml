@@ -1,0 +1,13 @@
+---
+- name: Compare Intended to Running config
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+
+  tasks:
+    - name: diff the running config against a master config
+      eos_config:
+        diff_against: intended
+        intended_config: "{{ lookup('file', 'master.cfg') }}"
