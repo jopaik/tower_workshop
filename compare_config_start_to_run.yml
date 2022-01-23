@@ -8,7 +8,7 @@
 
   tasks:
     - name: check the startup-config against the running-config
-      cisco.ios.ios_config:
+      ios_config:
         diff_against: running
         diff_ignore_lines:
         - ntp clock .*
