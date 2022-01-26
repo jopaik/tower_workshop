@@ -12,8 +12,3 @@
         diff_against: intended
         intended_config: "{{ lookup('file', 'master.cfg') }}"
       diff: yes
-      register: diff_output
-
-    - name: debug diff output
-      debug:
-        msg: "{{ diff_output }}"
