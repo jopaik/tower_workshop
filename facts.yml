@@ -6,10 +6,7 @@
   tasks:
     - name: gather router facts
       ios_facts:
-        gather_subset: all
-        gather_network_resources: interfaces
-      register: output
 
     - name: display interfaces
       debug:
-        msg: "The IOS Interfaces: {{ output.ansible_facts.ansible_network_resources.interfaces }}"
+        msg: "The IOS Interfaces: {{ ansible_network_interfaces }}"
