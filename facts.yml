@@ -9,4 +9,4 @@
 
     - name: display interfaces
       debug:
-        msg: "The IOS Interfaces: {{ ansible_net_interfaces.[0] }}"
+        msg: "The IOS Interfaces: {{ ansible_net_interfaces[0][0] }}"
