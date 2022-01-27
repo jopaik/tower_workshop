@@ -6,7 +6,7 @@
   tasks:
     - name: gather router facts
       ios_facts:
-        gather_subset: min
+        gather_subset: all
         gather_network_resources: interfaces
       register: output
 
