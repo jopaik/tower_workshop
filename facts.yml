@@ -5,7 +5,7 @@
 
   tasks:
     - name: gather router facts
-      ios.facts:
+      ios_facts:
 
     - name: display version
       debug:
