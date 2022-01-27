@@ -9,7 +9,7 @@
         gather_subset: min
         gather_network_resources: interfaces
       register: output
-      
+
     - name: display interfaces
       debug:
-        msg: "The IOS Interfaces: {{ output }}"
+        msg: "The IOS Interfaces: {{ output.ansible_facts.ansible_network_resources.interfaces[0].name }}"
