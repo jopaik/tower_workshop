@@ -12,4 +12,4 @@
 
     - name: display interfaces
       debug:
-        msg: "The IOS Interfaces: {{ output.ansible_facts.ansible_network_resources.interfaces[].name }}"
+        msg: "The IOS Interfaces: {{ output.ansible_facts.ansible_network_resources.interfaces.name[0] }}"
