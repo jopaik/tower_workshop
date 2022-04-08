@@ -1,0 +1,11 @@
+---
+- name: gather information from routers
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+    - name: display interfaces
+      debug:
+        msg:
+          - "IOS Serial number : {{ ansible_net_serialnum }}"
+          - "The IOS Interfaces: {{ ansible_net_interfaces }}"
