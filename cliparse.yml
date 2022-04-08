@@ -1,0 +1,20 @@
+---
+- name: cli parse example
+  hosts: cisco
+  gather_facts: true
+
+  tasks:
+    - name: Run command and parse with native
+      ansible.netcommon.cli_parse:
+        command: "show interface"
+        parser:
+          name: ansible.netcommon.native
+        set_fact: interfaces_fact
+
+
+    - name: Pass text and template_path
+      ansible.netcommon.cli_parse:
+        text: "{{ previous_command['stdout'] }}"
+        parser:
+          name: ansible.netcommon.native
+          template_path: "{{ role_path }}/templates/ios_show_interface.yaml"

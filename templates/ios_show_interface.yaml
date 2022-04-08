@@ -1,0 +1,8 @@
+- example: Ethernet1/1 is up
+  getval: '(?P<name>\S+) is (?P<oper_state>\S+)'
+  result:
+    "{{ name }}":
+        name: "{{ name }}"
+        state:
+        operating: "{{ oper_state }}"
+  shared: True
