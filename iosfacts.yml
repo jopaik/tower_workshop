@@ -4,6 +4,9 @@
   gather_facts: false
 
   tasks:
+    - name: gather router facts
+      ios_facts:
+
     - name: display interfaces
       debug:
         msg: "The IOS Interfaces: {{ ansible_net_interfaces }}"
