@@ -14,7 +14,7 @@
 
     - name: Pass text and template_path
       ansible.netcommon.cli_parse:
-        text: "{{ interface_fact }}"
+        text: "{{ interfaces_fact }}"
         parser:
           name: ansible.netcommon.native
           template_path: "{{ role_path }}/templates/ios_show_interface.yaml"
