@@ -5,16 +5,8 @@
 
   tasks:
     - name: Run command and parse with native
-      cli_parse:
+      ansible.utils.cli_parse:
         command: "show interface"
         parser:
           name: ansible.netcommon.native
         set_fact: interfaces_fact
-
-
-    - name: Pass text and template_path
-      cli_parse:
-        text: "{{ interfaces_fact }}"
-        parser:
-          name: ansible.netcommon.native
-          template_path: "{{ playbook_dir }}/templates/ios_show_interface.yaml"
