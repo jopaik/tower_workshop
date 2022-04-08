@@ -11,3 +11,7 @@
           name: ansible.netcommon.native
           template_path: "{{ playbook_dir }}/templates/ios_show_interface.yaml"
         set_fact: interfaces_fact
+
+    - name: show facts
+      debug:
+        msg: "{{ interfaces_fact }}"
