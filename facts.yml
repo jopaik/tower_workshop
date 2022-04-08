@@ -2,7 +2,10 @@
 - name: gather information from routers
   hosts: cisco
   gather_facts: true
-
+  vars:
+    custom_fact1: Joon_fact1
+    custom_fact2: Joon_fact2
+    
   tasks:
     - name: display interfaces
       debug:
