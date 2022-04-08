@@ -5,7 +5,7 @@
 
   tasks:
     - name: Run command and parse with native
-      ansible.utils.cli_parse:
+      cli_parse:
         command: "show interface"
         parser:
           name: ansible.netcommon.native
@@ -13,7 +13,7 @@
 
 
     - name: Pass text and template_path
-      ansible.utils.cli_parse:
+      cli_parse:
         text: "{{ interfaces_fact }}"
         parser:
           name: ansible.netcommon.native
