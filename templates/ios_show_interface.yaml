@@ -15,6 +15,7 @@
       name: "{{ name }}"
       state:
         admin: "{{ admin_state }}"
+  shared: true
 
 - example: "  Hardware: Ethernet, address: 5254.005a.f8b5 (bia 5254.005a.f8b5)"
   getval: '\s+Hardware: (?P<hardware>.*), address: (?P<mac>\S+)'
@@ -22,3 +23,4 @@
     "{{ name }}":
       hardware: "{{ hardware }}"
       mac_address: "{{ mac }}"
+  shared: true
