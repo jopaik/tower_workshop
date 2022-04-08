@@ -2,6 +2,8 @@
 - name: gather information from routers
   hosts: cisco
   gather_facts: true
+  var:
+    var_fact: Joon_Var_fact2
 
   tasks:
     - name: display interfaces
@@ -11,5 +13,5 @@
     - name: Custom facts
       set_fact:
         custom_fact1: Joon_fact1
-        custom_fact2: Joon_fact2
+        custom_fact2: "{{ var_fact }}"
         cacheable: yes
