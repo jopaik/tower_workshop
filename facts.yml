@@ -2,7 +2,7 @@
 - name: gather information from routers
   hosts: cisco
   gather_facts: true
-  var:
+  vars:
     var_fact: Joon_Var_fact2
 
   tasks:
