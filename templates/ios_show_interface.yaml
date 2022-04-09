@@ -6,7 +6,8 @@
       name: "{{ name }}"
       state:
         operating: "{{ oper_state }}"
-
+  shared: yes
+  
 - example: line protocol is up (?P<protocol_state>\S+)
   getval: 'line protocol is (?P<protocol_state>\S+),'
   result:
