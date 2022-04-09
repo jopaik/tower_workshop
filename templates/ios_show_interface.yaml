@@ -6,21 +6,18 @@
       name: "{{ name }}"
       state:
         operating: "{{ oper_state }}"
-  shared: true
 
-- example: admin state is up, Dedicated Interface
-  getval: 'admin state is (?P<admin_state>\S+),'
+- example: line protocol is up (?P<protocol_state>\S+)
+  getval: 'line protocol is (?P<protocol_state>\S+),'
   result:
     "{{ name }}":
       name: "{{ name }}"
       state:
-        admin: "{{ admin_state }}"
-  shared: true
+        protocol: "{{ protocol_state }}"
 
-- example: "  Hardware: Ethernet, address: 5254.005a.f8b5 (bia 5254.005a.f8b5)"
-  getval: '\s+Hardware: (?P<hardware>.*), address: (?P<mac>\S+)'
+- example: " address is : 5254.005a.f8b5 (bia 5254.005a.f8b5)"
+  getval: '\s+Hardware is (?P<hardware>.*), address is (?P<mac>\S+)'
   result:
     "{{ name }}":
       hardware: "{{ hardware }}"
       mac_address: "{{ mac }}"
-  shared: true
