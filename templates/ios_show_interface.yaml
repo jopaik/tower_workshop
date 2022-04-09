@@ -7,7 +7,7 @@
   shared: yes
 
 - example: line protocol is up
-  getval: '(?P<name>\S+) is (?P<oper_state>\S+), line protocol is (?P<protocol_state>\S+)'
+  getval: '(^(.+?),) line protocol is (?P<protocol_state>\S+)'
   result:
     "{{ name }}":
       line_protocol: "{{ protocol_state }}"
