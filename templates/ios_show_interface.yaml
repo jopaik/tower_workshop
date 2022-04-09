@@ -3,16 +3,14 @@
   getval: '(?P<name>\S+) is (?P<oper_state>\S+)'
   result:
     "{{ name }}":
-      name: "{{ name }}"
       operating: "{{ oper_state }}"
   shared: yes
 
 - example: line protocol is up
-  getval: 'line protocol is (?P<protocol_state>\S+),'
+  getval: '*, line protocol is (?P<protocol_state>\S+)'
   result:
     "{{ name }}":
-      name: "{{ name }}"
-      protocol: "{{ protocol_state }}"
+      line_protocol: "{{ protocol_state }}"
 
 - example: " address is : 5254.005a.f8b5 (bia 5254.005a.f8b5)"
   getval: '\s+Hardware is (?P<hardware>.*), address is (?P<mac>\S+)'
