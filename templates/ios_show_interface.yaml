@@ -1,5 +1,5 @@
 ---
-- example: Ethernet1/1 is up
+- example: " Ethernet1/1 is up, line protocol is up "
   getval: '(?P<name>\S+) is (?P<oper_state>\S+), line protocol is (?P<protocol_state>\S+)'
   result:
     "{{ name }}":
