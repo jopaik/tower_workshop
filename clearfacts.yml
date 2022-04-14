@@ -1,0 +1,8 @@
+---
+- name: clear facts cache routers
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+    - name: Clear gathered facts from all currently targeted hosts
+      meta: clear_facts
