@@ -6,11 +6,7 @@
     var_fact: Joon_Var_fact2
 
   tasks:
-    - name: get legacy and resouce
-      ios_facts:
-        gather_subset: all
-        gather_network_resources: all
-        
+
     - name: display ios
       debug:
         msg: "IOS Interfaces {{ ansible_net_interfaces }}"
