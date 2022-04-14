@@ -1,20 +1,15 @@
 ---
 - name: gather information from routers
   hosts: cisco
-  gather_facts: false
+  gather_facts: true
   vars:
     var_fact: Joon_Var_fact2
 
   tasks:
-    - name: Gather legacy and resource facts
-      ios_facts:
-        gather_subset: all
-        gather_network_resources: all
-      register: output
 
-    - name: display ios facts
+    - name: display ios
       debug:
-        msg: "{{ output }}"
+        msg: "IOS Interfaces {{ ansible_net_interfaces }}"
 
     - name: Custom facts
       set_fact:
