@@ -10,9 +10,17 @@
         state: gathered
       register: vlan_config
 
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /resource/
+        state: directory
+      delegate_to: backup-server
+      become: true
+      run_once: true
+
     - name: copy vlan_config to file
       copy:
         content: "{{ vlan_config | to_nice_yaml }}"
-        dest: "/{{ inventory_hostname }}_vlan.yml"
+        dest: "/resource/{{ inventory_hostname }}_vlan.yml"
       become: true
       delegate_to: backup-server
