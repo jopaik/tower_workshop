@@ -1,12 +1,12 @@
 ---
   - name: Gather ACL
-    hosts: cisco
+    hosts: arista
     gather_facts: false
 
     tasks:
 
     - name: use vlans resource module
-      cisco.ios.ios_acls:
+      arista.eos.eos_acls:
         state: gathered
       register: acl_config
 
