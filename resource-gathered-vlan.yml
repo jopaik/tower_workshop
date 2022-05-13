@@ -13,4 +13,6 @@
     - name: copy vlan_config to file
       copy:
         content: "{{ vlan_config | to_nice_yaml }}"
-        dest: "{{ playbook_dir }}/{{ inventory_hostname }}_vlan.yml"
+        dest: "/{{ inventory_hostname }}_vlan.yml"
+      become: true
+      delegate_to: backup-server
