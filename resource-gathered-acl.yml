@@ -4,7 +4,6 @@
     gather_facts: false
 
     tasks:
-
     - name: use vlans resource module
       arista.eos.eos_acls:
         state: gathered
