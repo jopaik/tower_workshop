@@ -1,3 +1,7 @@
 interface: Loopback10
 ip: 192.168.210.1 255.255.255.255
 desc_int: This is example from host_vars rtr1 ios in master branch
+config-interface:
+  - enabled: true
+    name: loopback100
+    description: Source-Of-Truth-JP-Demo

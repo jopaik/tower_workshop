@@ -1,0 +1,10 @@
+---
+- name: configure IOS interface
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+  - name: Merge provided configuration with device configuration
+    cisco.ios.interfaces:
+      config: "{{ config-interface }}"
+      state: merged
