@@ -1,0 +1,18 @@
+---
+- name: cli raw example avocent
+  hosts: all
+  gather_facts: false
+  vars:
+    ansible_user: avocent
+    ansible_ssh_pass: avocent123
+
+  tasks:
+    - name: raw example task
+      raw:  /sbin/ifconfig
+      args:
+        executable: shell
+      register: output
+
+    - name: show output
+      debug:
+        msg: "{{ output }}"
