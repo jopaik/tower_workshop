@@ -4,7 +4,7 @@
     gather_facts: false
 
     tasks:
-    - name: use ACL resource module
+    - name: use Interface resource module
       cisco.ios.interfaces:
         state: gathered
       register: interface_config
