@@ -1,0 +1,8 @@
+---
+- name: test
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+  - name: This is a test
+    
