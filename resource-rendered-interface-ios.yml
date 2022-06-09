@@ -6,8 +6,14 @@
     tasks:
     - name: use Interface resource module
       cisco.ios.interfaces:
-        state: rendered
+        state: gathered
       register: interface_config
+
+    - name: use Interface resource module
+      cisco.ios.interfaces:
+        config: "{{ interface_config }}"
+        state: rendered
+      register: interface_rendered
 
     - name: Create a directory if it does not exist
       ansible.builtin.file:
@@ -19,7 +25,7 @@
 
     - name: copy interface_config to file
       copy:
-        content: "{{ interface_config | to_nice_yaml }}"
+        content: "{{ interface_rendered | to_nice_yaml }}"
         dest: "/resource/{{ inventory_hostname }}_interface_rendered.yml"
       become: true
       delegate_to: backup-server
