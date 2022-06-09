@@ -1,7 +1,20 @@
 interface: Loopback10
 ip: 192.168.210.1 255.255.255.255
 desc_int: This is example from host_vars rtr1 ios in master branch
-config:
+interfaces:
   - enabled: true
     name: loopback100
-    description: Source-Of-Truth-JP-Demo
+    description: Source_Of_Truth_JP_Demo
+vlans:
+  - name: Source-of_Truth_111
+    vlan_id: 111
+acls:
+  aces:
+    - destination:
+        any: true
+      grant: permit
+      protocol: icmp
+      sequence: 55
+      source:
+        any: true
+  name: sot_acl
