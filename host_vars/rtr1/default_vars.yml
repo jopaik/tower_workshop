@@ -11,7 +11,7 @@ vlans:
 acls_demo:
   - afi: ipv4
     acls:
-    - name: 110
+    - name: source_of_truth_acl
       aces:
       - grant: deny
         sequence: 20
