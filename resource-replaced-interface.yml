@@ -1,0 +1,10 @@
+---
+- name: configure IOS interface Replaced
+  hosts: rtr1
+  gather_facts: false
+
+  tasks:
+  - name: replaced provided configuration with device configuration
+    cisco.ios.interfaces:
+      config: "{{ interfaces }}"
+      state: replaced
