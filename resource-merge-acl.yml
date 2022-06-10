@@ -1,0 +1,10 @@
+---
+- name: configure IOS ACLs
+  hosts: rtr1
+  gather_facts: false
+
+  tasks:
+  - name: Merge provided configuration with device configuration
+    cisco.ios.ios_acls:
+      config: "{{ acls }}"
+      state: merged
