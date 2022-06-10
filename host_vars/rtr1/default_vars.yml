@@ -9,8 +9,6 @@ vlans:
   - name: Source-of_Truth_111
     vlan_id: 111
 acls_demo:
-  - afi: ipv4
-    acls:
     - name: sot_acl
       aces:
       - sequence: 35
