@@ -8,8 +8,11 @@ interfaces:
 vlans:
   - name: Source-of_Truth_111
     vlan_id: 111
-acls:
-  aces:
+acls_demo:
+  - afi: ipv4
+    acls:
+    - name: sot_acl
+    aces:
     - destination:
         any: true
       grant: permit
@@ -17,4 +20,3 @@ acls:
       sequence: 55
       source:
         any: true
-  name: sot_acl
