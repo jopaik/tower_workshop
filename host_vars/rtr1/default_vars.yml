@@ -12,11 +12,11 @@ acls_demo:
   - afi: ipv4
     acls:
     - name: sot_acl
-    aces:
-    - destination:
-        any: true
-      grant: permit
-      protocol: icmp
-      sequence: 55
-      source:
-        any: true
+      aces:
+      - sequence: 35
+        grant: deny
+        protocol: ospf
+        source:
+          subnet_address: 20.0.0.0/8
+        destination:
+          any: true
