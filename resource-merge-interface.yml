@@ -1,5 +1,5 @@
 ---
-- name: configure IOS interface
+- name: configure IOS interface Merge
   hosts: rtr1
   gather_facts: false
 
