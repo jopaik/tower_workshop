@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: yes
+  force_handlers: True
+
+  vars:
+    firmware_nxos_filename: titanium-d1.7.3.0.D1.1.bin
+
+  roles:
+    - nxos_upgrade
