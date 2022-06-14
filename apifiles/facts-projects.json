@@ -1,0 +1,76 @@
+{
+     "projects": [
+          {
+               "name": "Workshop Project",
+               "description": "",
+               "local_path": "_9__workshop_project",
+               "scm_type": "git",
+               "scm_url": "https://github.com/network-automation/toolkit",
+               "scm_branch": "",
+               "scm_refspec": "",
+               "scm_clean": false,
+               "scm_track_submodules": false,
+               "scm_delete_on_update": false,
+               "credential": null,
+               "timeout": 0,
+               "scm_update_on_launch": false,
+               "scm_update_cache_timeout": 0,
+               "allow_override": false,
+               "default_environment": null,
+               "organization": {
+                    "name": "Red Hat network organization",
+                    "type": "organization"
+               },
+               "related": {
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": []
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Red Hat network organization",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Project",
+                    "type": "project"
+               }
+          },
+          {
+               "name": "Joon Workshop",
+               "description": "",
+               "local_path": "_16__joon_workshop",
+               "scm_type": "git",
+               "scm_url": "https://github.com/jopaik/tower_workshop.git",
+               "scm_branch": "",
+               "scm_refspec": "",
+               "scm_clean": false,
+               "scm_track_submodules": false,
+               "scm_delete_on_update": false,
+               "credential": null,
+               "timeout": 0,
+               "scm_update_on_launch": false,
+               "scm_update_cache_timeout": 0,
+               "allow_override": false,
+               "default_environment": null,
+               "organization": {
+                    "name": "Default",
+                    "type": "organization"
+               },
+               "related": {
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": []
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Joon Workshop",
+                    "type": "project"
+               }
+          }
+     ]
+}
