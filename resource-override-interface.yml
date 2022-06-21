@@ -1,0 +1,10 @@
+---
+- name: configure IOS interface Merge Overriden
+  hosts: rtr1
+  gather_facts: false
+
+  tasks:
+  - name: Overriden provided configuration with device configuration
+    cisco.ios.interfaces:
+      config: "{{ interfaces }}"
+      state: overridden
