@@ -2,12 +2,14 @@
   - name: Rendered Interface
     hosts: cisco
     gather_facts: false
-
+    vars:
+    interface_config:
+      - name: loopback200
+        descripton: Loopback200_Rendered_Demo
+        enabled: true
+        mtu: 1476
+        
     tasks:
-    - name: use Interface resource module
-      cisco.ios.interfaces:
-        state: gathered
-      register: interface_config
 
     - name: use Interface resource module
       cisco.ios.interfaces:
