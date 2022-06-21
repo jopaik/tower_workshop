@@ -7,7 +7,7 @@
 
     - name: use Interface resource module
       cisco.ios.interfaces:
-        running_config: "{{ lookup('file', './template/parsed.cfg') }}"
+        running_config: "{{ lookup('file', './templates/parsed.cfg') }}"
         state: parsed
       register: interface_parsed
 
