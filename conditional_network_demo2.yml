@@ -5,8 +5,6 @@
   gather_facts: no
 
   vars:
-    ntp_server: "216.239.35.0"
-    ntp_server_fail: "300.300.300.300"
     when_IOS: "IOS"
 
   tasks:
