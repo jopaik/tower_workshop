@@ -13,7 +13,11 @@
 
     - name: use Interface resource module
       cisco.ios.interfaces:
-        config: "{{ interface_config }}"
+        config:
+          - name: Loopback200
+            description: Loopback200_Rendered_Demo
+            mtu: 1476
+            enabled: true
         state: rendered
       register: interface_rendered
 
