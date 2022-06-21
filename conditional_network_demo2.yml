@@ -17,6 +17,18 @@
 
     - name: When demo failure
       debug:
-        msg: "This is IOS conditional check failure"
-      when: when_IOS != "IOS"
+        msg: "This is Not IOS conditional check failure"
+      when: when_IOS != "NXOS"
+    
+    - name: Using fail module
+      fail: 
+        msg: This is IOS fail module check failure
+      when: when_IOS == "IOS"
+    
+    - name: check for IOS in show version
+      cisco.ios.command:
+        commands: show version
+        wait_for: result[0] contains IOS
+
+  
 
