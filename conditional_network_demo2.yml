@@ -1,0 +1,34 @@
+---
+- name: Conditional Network Demo
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    ntp_server: "216.239.35.0"
+    ntp_server_fail: "300.300.300.300"
+    when_IOS: "IOS"
+
+  tasks:
+    - name: ipv4 success
+      assert:
+        that:
+          - "ntp_server | ipaddr"
+        success_msg: "'This is a valid IPv4 address"
+
+    - name: ipv4 fail
+      assert:
+        that:
+          - "ntp_server_fail | ipaddr"
+        msg: "This is NOT a valid IPv4 address"
+
+    - name: When demo success
+      debug:
+        msg: "This is IOS conditional check pass"
+      when: when_IOS == "IOS"
+
+    - name: When demo failure
+      debug:
+        msg: "This is IOS conditional check failure"
+      when: when_IOS != "IOS"
+      
