@@ -21,7 +21,7 @@
 
     - name: copy interface_config to file
       copy:
-        content: "{{ interface_parsed }}"
+        content: "{{ interface_parsed | to_nice_yaml }}"
         dest: "/resource/{{ inventory_hostname }}_interface_parsed.yml"
       become: true
       delegate_to: backup-server

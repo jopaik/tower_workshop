@@ -19,7 +19,7 @@
 
     - name: copy interface_config to file
       copy:
-        content: "{{ interface_config }}"
+        content: "{{ interface_config | to_nice_yaml }}"
         dest: "/resource/{{ inventory_hostname }}_interface_gathered.yml"
       become: true
       delegate_to: backup-server
