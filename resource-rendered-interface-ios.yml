@@ -3,12 +3,12 @@
     hosts: cisco
     gather_facts: false
     vars:
-    interface_config:
-      - name: loopback200
-        descripton: Loopback200_Rendered_Demo
-        enabled: true
-        mtu: 1476
-        
+      interface_config:
+        - name: loopback200
+          descripton: Loopback200_Rendered_Demo
+          enabled: true
+          mtu: 1476
+          
     tasks:
 
     - name: use Interface resource module
