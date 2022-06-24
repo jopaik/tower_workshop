@@ -31,6 +31,12 @@
           - when_NXOS == "NXOS"
         success_msg: "This is IOS and NXOS"
 
+    - name: IOS or not NXOS
+      assert:
+        that:
+          - when_IOS == "IOS" or when_NXOS != "NXOS"
+        success_msg: "This is IOS or not NXOS"
+
     - name: When demo success
       debug:
         msg: "This is IOS conditional check pass"
