@@ -9,6 +9,7 @@
     ntp_server_fail: "300.300.300.300"
     when_IOS: "IOS"
     when_NXOS: "NXOS"
+    my_param: 50
 
   tasks:
     - name: ipv4 success
@@ -36,6 +37,14 @@
         that:
           - when_IOS == "IOS" or when_NXOS != "NXOS"
         success_msg: "This is IOS or not NXOS"
+
+    - name: fail and success my_param
+      ansible.builtin.assert:
+        that:
+          - my_param <= 100
+          - my_param >= 0
+        fail_msg: "'my_param' must be between 0 and 100"
+        success_msg: "'my_param' is between 0 and 100"
 
     - name: When demo success
       debug:
