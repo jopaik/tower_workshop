@@ -8,6 +8,7 @@
     ntp_server: "216.239.35.0"
     ntp_server_fail: "300.300.300.300"
     when_IOS: "IOS"
+    when_NXOS: "NXOS"
 
   tasks:
     - name: ipv4 success
@@ -22,6 +23,13 @@
           - "ntp_server_fail | ipaddr"
         msg: "This is NOT a valid IPv4 address"
       ignore_errors: True
+
+    - name: ipv4 fail
+      assert:
+        that:
+          - when_IOS == IOS
+          - when_NXOS == NXOS
+      success_msg: "This is IOS and NXOS"
 
     - name: When demo success
       debug:
@@ -38,3 +46,9 @@
       cisco.ios.command:
         commands: show version
         wait_for: result[0] contains IOS
+
+    - name: Using fail module
+      fail:
+        msg: This is IOS fail module check failure
+      when: when_IOS == "IOS"
+      ignore_errors: True
