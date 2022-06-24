@@ -24,12 +24,12 @@
         msg: "This is NOT a valid IPv4 address"
       ignore_errors: True
 
-    - name: ipv4 fail
+    - name: IOS and NXOS
       assert:
         that:
           - when_IOS == IOS
           - when_NXOS == NXOS
-      success_msg: "This is IOS and NXOS"
+        success_msg: "This is IOS and NXOS"
 
     - name: When demo success
       debug:
