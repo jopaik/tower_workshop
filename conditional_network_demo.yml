@@ -22,7 +22,7 @@
           - "ntp_server_fail | ipaddr"
         msg: "This is NOT a valid IPv4 address"
       ignore_errors: True
-      
+
     - name: When demo success
       debug:
         msg: "This is IOS conditional check pass"
@@ -32,11 +32,9 @@
       debug:
         msg: "This is IOS conditional check failure"
       when: when_IOS != "IOS"
-      ignore_erros: True
-    
+      ignore_errors: True
+
     - name: check for IOS in show version
       cisco.ios.command:
         commands: show version
         wait_for: result[0] contains IOS
-
-  
