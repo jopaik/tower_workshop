@@ -27,8 +27,8 @@
     - name: IOS and NXOS
       assert:
         that:
-          - when_IOS == IOS
-          - when_NXOS == NXOS
+          - when_IOS == "IOS"
+          - when_NXOS == "NXOS"
         success_msg: "This is IOS and NXOS"
 
     - name: When demo success
