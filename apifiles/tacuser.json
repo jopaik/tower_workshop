@@ -68,111 +68,31 @@
                "related": {
                     "roles": [
                          {
-                              "name": "Approve",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
                               "name": "Admin",
                               "type": "role",
                               "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execute",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Project Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Inventory Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Credential Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Workflow Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Notification Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Job Template Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execution Environment Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Auditor",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-admin",
+                                   "type": "team"
                               }
                          },
                          {
                               "name": "Member",
                               "type": "role",
                               "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-admin",
+                                   "type": "team"
                               }
                          },
                          {
                               "name": "Read",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Member",
                               "type": "role",
                               "content_object": {
                                    "organization": {
@@ -191,7 +111,7 @@
                }
           },
           {
-               "username": "nxosadmin",
+               "username": "iosuser",
                "first_name": "",
                "last_name": "",
                "email": "",
@@ -200,107 +120,15 @@
                "related": {
                     "roles": [
                          {
-                              "name": "Approve",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
                               "name": "Admin",
                               "type": "role",
                               "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execute",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Project Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Inventory Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Credential Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Workflow Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Notification Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Job Template Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execution Environment Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Auditor",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Member",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Read",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
                               }
                          },
                          {
@@ -311,19 +139,31 @@
                                         "name": "network-ops",
                                         "type": "organization"
                                    },
-                                   "name": "net-ops-admin",
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Read",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
                                    "type": "team"
                               }
                          }
                     ]
                },
                "natural_key": {
-                    "username": "nxosadmin",
+                    "username": "iosuser",
                     "type": "user"
                }
           },
           {
-               "username": "iosjoon",
+               "username": "nxosuser",
                "first_name": "",
                "last_name": "",
                "email": "",
@@ -332,107 +172,15 @@
                "related": {
                     "roles": [
                          {
-                              "name": "Approve",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
                               "name": "Admin",
                               "type": "role",
                               "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execute",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Project Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Inventory Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Credential Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Workflow Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Notification Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Job Template Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Execution Environment Admin",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Auditor",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Member",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
-                              }
-                         },
-                         {
-                              "name": "Read",
-                              "type": "role",
-                              "content_object": {
-                                   "name": "network-ops",
-                                   "type": "organization"
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
                               }
                          },
                          {
@@ -443,14 +191,26 @@
                                         "name": "network-ops",
                                         "type": "organization"
                                    },
-                                   "name": "net-ops-admin",
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Read",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
                                    "type": "team"
                               }
                          }
                     ]
                },
                "natural_key": {
-                    "username": "iosjoon",
+                    "username": "nxosuser",
                     "type": "user"
                }
           }
