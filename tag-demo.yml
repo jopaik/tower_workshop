@@ -5,18 +5,18 @@
 
     - name: Start WAS
       debug:
-        msg: "Starting WAS for {{ ansible_hostname }}"
+        msg: "Starting WAS for {{ inventory_hostname }}"
       tags:
         - wasstart
 
     - name: Stop WAS
       debug:
-        msg: "Stopping WAS for {{ ansible_hostname }}"
+        msg: "Stopping WAS for {{ inventory_hostname }}"
       tags:
         - wasstop
 
     - name: Restart WAS
       debug:
-        msg: "Restart WAS for {{ ansible_hostname }}"
+        msg: "Restart WAS for {{ inventory_hostname }}"
       tags:
         - wasrestart
