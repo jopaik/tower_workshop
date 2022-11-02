@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+
+    - name: Start WAS
+      debug:
+        msg: "Starting WAS for {{ hostname }}"
+      tags:
+        - wasstart
+
+    - name: Stop WAS
+      debug:
+        msg: "Stopping WAS for {{ hostname }}"
+      tags:
+        - wasstop
+
+    - name: Restart WAS
+      debug:
+        msg: "Restart WAS for {{ hostname }}"
+      tags:
+        - wasrestart
