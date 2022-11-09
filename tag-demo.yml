@@ -2,7 +2,6 @@
 - hosts: all
   gather_facts: False
   tasks:
-
     - name: Start WAS
       debug:
         msg: "Starting WAS for {{ inventory_hostname }}"
