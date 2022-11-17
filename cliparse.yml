@@ -12,6 +12,11 @@
           template_path: "{{ playbook_dir }}/templates/ios_show_interface.yaml"
         set_fact: interfaces_fact
 
+    - name: Custom facts3
+      set_fact:
+        custom_fact3: "{{ interfaces_fact }}"
+        cacheable: yes
+
     - name: show facts
       debug:
         msg: "{{ interfaces_fact }}"

@@ -1,0 +1,38 @@
+{
+ "collection_info": {
+  "namespace": "redhat_cop",
+  "name": "ah_configuration",
+  "version": "0.9.2",
+  "authors": [
+   "Sean Sullivan @sean-m-sullivan",
+   "Tom Page @Tompage1994"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cloud",
+   "infrastructure",
+   "galaxy",
+   "ansible",
+   "galaxy",
+   "automation"
+  ],
+  "description": "Ansible content that interacts with the Ansible Automation Hub or Galaxy NG API.",
+  "license": [
+   "GPL-3.0-only"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/redhat-cop/ah_configuration",
+  "documentation": "https://github.com/redhat-cop/ah_configuration/blob/master/README.md",
+  "homepage": null,
+  "issues": "https://github.com/redhat-cop/ah_configuration/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "032db3773ed2f6a6c2ef1938d6b953bdc5506b065996f5da04b68e1b68479cd9",
+  "format": 1
+ },
+ "format": 1
+}

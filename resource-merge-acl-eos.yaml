@@ -1,0 +1,21 @@
+---
+- name: configure ACLs
+  hosts: arista
+  gather_facts: false
+
+  tasks:
+  - name: Merge provided configuration with device configuration
+    arista.eos.eos_acls:
+      config:
+      - afi: ipv4
+        acls:
+        - name: sot_acl
+          aces:
+          - sequence: 35
+            grant: deny
+            protocol: ospf
+            source:
+              subnet_address: 20.0.0.0/8
+            destination:
+              any: true
+      state: merged

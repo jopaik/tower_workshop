@@ -1,0 +1,27 @@
+---
+  - name: Parsed Interface
+    hosts: cisco
+    gather_facts: false
+          
+    tasks:
+
+    - name: use Interface resource module
+      cisco.ios.interfaces:
+        running_config: "{{ lookup('file', './templates/parsed.cfg') }}"
+        state: parsed
+      register: interface_parsed
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /resource/
+        state: directory
+      delegate_to: backup-server
+      become: true
+      run_once: true
+
+    - name: copy interface_config to file
+      copy:
+        content: "{{ interface_parsed | to_nice_yaml }}"
+        dest: "/resource/{{ inventory_hostname }}_interface_parsed.yml"
+      become: true
+      delegate_to: backup-server

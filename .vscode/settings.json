@@ -1,0 +1,10 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/$defs/playbook": [
+            "file:///Users/joonpaik/git/joon/tower_workshop/clearfacts.yml",
+            "file:///Users/joonpaik/git/joon/tower_workshop/testplaybook.yml",
+            "file:///Users/joonpaik/git/joon/tower_workshop/cliparse.yml",
+            "file:///Users/joonpaik/git/joon/tower_workshop/comp_demo_banner.yml"
+        ]
+    }
+}

@@ -1,0 +1,218 @@
+{
+     "users": [
+          {
+               "username": "admin",
+               "first_name": "",
+               "last_name": "",
+               "email": "admin@example.com",
+               "is_superuser": true,
+               "is_system_auditor": false,
+               "related": {
+                    "roles": [
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Get EE info",
+                                   "type": "job_template"
+                              }
+                         },
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Demo",
+                                   "type": "job_template"
+                              }
+                         },
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": null,
+                                   "name": "Demo Credential",
+                                   "credential_type": {
+                                        "name": "Machine",
+                                        "kind": "ssh",
+                                        "type": "credential_type"
+                                   },
+                                   "type": "credential"
+                              }
+                         },
+                         {
+                              "name": "System Administrator",
+                              "type": "role"
+                         }
+                    ]
+               },
+               "natural_key": {
+                    "username": "admin",
+                    "type": "user"
+               }
+          },
+          {
+               "username": "iosadmin",
+               "first_name": "",
+               "last_name": "",
+               "email": "",
+               "is_superuser": false,
+               "is_system_auditor": false,
+               "related": {
+                    "roles": [
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-admin",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Member",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-admin",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Read",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-admin",
+                                   "type": "team"
+                              }
+                         }
+                    ]
+               },
+               "natural_key": {
+                    "username": "iosadmin",
+                    "type": "user"
+               }
+          },
+          {
+               "username": "iosuser",
+               "first_name": "",
+               "last_name": "",
+               "email": "",
+               "is_superuser": false,
+               "is_system_auditor": false,
+               "related": {
+                    "roles": [
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Member",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Read",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         }
+                    ]
+               },
+               "natural_key": {
+                    "username": "iosuser",
+                    "type": "user"
+               }
+          },
+          {
+               "username": "nxosuser",
+               "first_name": "",
+               "last_name": "",
+               "email": "",
+               "is_superuser": false,
+               "is_system_auditor": false,
+               "related": {
+                    "roles": [
+                         {
+                              "name": "Admin",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Member",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         },
+                         {
+                              "name": "Read",
+                              "type": "role",
+                              "content_object": {
+                                   "organization": {
+                                        "name": "network-ops",
+                                        "type": "organization"
+                                   },
+                                   "name": "net-ops-user",
+                                   "type": "team"
+                              }
+                         }
+                    ]
+               },
+               "natural_key": {
+                    "username": "nxosuser",
+                    "type": "user"
+               }
+          }
+     ]
+}

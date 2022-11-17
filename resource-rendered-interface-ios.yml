@@ -1,0 +1,37 @@
+---
+  - name: Rendered Interface
+    hosts: cisco
+    gather_facts: false
+    vars:
+      interface_config:
+        - name: loopback200
+          descripton: Loopback200_Rendered_Demo
+          enabled: true
+          mtu: 1476
+          
+    tasks:
+
+    - name: use Interface resource module
+      cisco.ios.interfaces:
+        config:
+          - name: Loopback200
+            description: Loopback200_Rendered_Demo
+            mtu: 1476
+            enabled: true
+        state: rendered
+      register: interface_rendered
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /resource/
+        state: directory
+      delegate_to: backup-server
+      become: true
+      run_once: true
+
+    - name: copy interface_config to file
+      copy:
+        content: "{{ interface_rendered | to_nice_yaml }}"
+        dest: "/resource/{{ inventory_hostname }}_interface_rendered.yml"
+      become: true
+      delegate_to: backup-server
