@@ -3,6 +3,14 @@
   tasks:
     - name: Print a message
       debug:
+        msg: "{{ some_var | default('default_123')}}"
+
+    - name: Print a message
+      debug:
+        msg: "{{ [1,2,3,4,5,6] | zip(['a','b','c','d','e','f']) | list }}"
+
+    - name: Print a message
+      debug:
         msg: "{{'new_filter_test'|my_filter1}}"
 
     - name: Print a message
