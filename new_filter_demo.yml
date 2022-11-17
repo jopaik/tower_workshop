@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "{{'new_filter_test'|my_filter1}}"
+
+    - name: Print a message
+      debug:
+        msg: "{{'new_filter_test'|my_filter2}}"
+
+    - name: Print a message
+      debug:
+        msg: "{{'new_filter_test'|my_filter3}}"
