@@ -6,14 +6,14 @@ class FilterModule(object):
             'my_filter3': self.my_filter3
         }
 
-    def my_filter1(self, a_variable):
-        a_new_variable = a_variable + ' JP NEW FILTER1'
-        return a_new_variable
+    def my_filter1(self, filter_input):
+        filter_input = filter_input + ' JP NEW FILTER1'
+        return filter_input
     
-    def my_filter2(self, b_variable):
-        b_new_variable = b_variable + ' JP NEW FILTER2'
-        return b_new_variable
+    def my_filter2(self, filter_input):
+        filter_input = filter_input + ' JP NEW FILTER2'
+        return filter_input
     
-    def my_filter3(self, c_variable):
-        c_new_variable = c_variable + ' JP NEW FILTER3'
-        return c_new_variable
+    def my_filter3(self, filter_input):
+        filter_input = filter_input + ' JP NEW FILTER3'
+        return filter_input
