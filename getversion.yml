@@ -1,0 +1,24 @@
+---
+- name: Get Ansible Version
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: get ansible version
+      ansible.builtin.command: ansible --version
+      register: ansibleversion
+
+    - name: get ansible collection list
+      ansible.builtin.command: ansible-galaxy collection list
+      register: collection
+
+    - name: get pip3 list
+      ansible.builtin.command: pip3 list
+      register: piplist
+
+    - name: output
+      ansible.builtin.debug:
+        msg:
+          - "{{ ansibleversion }}"
+          - "{{ collection }}"
+          - "{{ piplist }}"
