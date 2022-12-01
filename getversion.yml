@@ -1,20 +1,23 @@
 ---
 - name: Get Ansible Version
-  hosts: all
+  hosts: localhost
   gather_facts: no
 
   tasks:
     - name: get ansible version
       ansible.builtin.command: ansible --version
       register: ansibleversion
+      delegate_to: localhost
 
     - name: get ansible collection list
       ansible.builtin.command: ansible-galaxy collection list
       register: collection
+      delegate_to: localhost
 
     - name: get pip3 list
       ansible.builtin.command: pip3 list
       register: piplist
+      delegate_to: localhost
 
     - name: output
       ansible.builtin.debug:
