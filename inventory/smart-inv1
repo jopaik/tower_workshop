@@ -1,0 +1,12 @@
+[cisco]
+cisco01 ansible_host=127.0.0.1  topology=leaf location=na
+cisco02 ansible_host=127.0.0.1  topology=leaf location=na
+cisco03 ansible_host=127.0.0.1  topology=leaf location=emea
+cisco04 ansible_host=127.0.0.1  topology=leaf location=emea
+
+
+[arista]
+arista01  ansible_host=127.0.0.1   topology=leaf location=na
+arista02  ansible_host=127.0.0.1  topology=leaf location=na
+arista03  ansible_host=127.0.0.1  topology=leaf location=emea
+arista04 ansible_host=127.0.0.1  topology=leaf location=emea

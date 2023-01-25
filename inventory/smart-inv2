@@ -1,0 +1,11 @@
+[nxos]
+nxos01  ansible_host=127.0.0.1 topology=spine location=na
+nxos02 ansible_host=127.0.0.1 topology=spine  location=na
+nxos03 ansible_host=127.0.0.1 topology=spine location=emea
+nxos04 ansible_host=127.0.0.1 topology=spine location=emea
+
+[iosxr]
+iosxr01 ansible_host=127.0.0.1  topology=wan location=na
+iosxr02 ansible_host=127.0.0.1  topology=wan location=na
+iosxr03 ansible_host=127.0.0.1  topology=wan location=emea
+iosxr04 ansible_host=127.0.0.1  topology=wan location=emea
