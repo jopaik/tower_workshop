@@ -1,0 +1,20 @@
+---
+- name: gather bgp info from router
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+  - name: Gather listed global BGP with provided configurations
+    cisco.ios.ios_bgp_global:
+      config:
+      state: gathered
+    register: output
+
+  - name: set bgp facts
+    ansible.builtin.set_fact:
+      custom_bgp_fact: output
+      cacheable: yes
+
+  - name: display interfaces
+    ansible.builtin.debug:
+      msg: "Output {{ output }}"
