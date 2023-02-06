@@ -12,7 +12,7 @@
 
   - name: set bgp facts
     ansible.builtin.set_fact:
-      custom_bgp_fact: "{{ output }}"
+      bgp_asnumber: "65002"
       cacheable: yes
 
   - name: display interfaces
