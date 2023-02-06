@@ -7,7 +7,6 @@
     - name: gather router facts
       ios_facts:
         gather_subset: all
-        gather_network_resources: interfaces
       register: output
 
     - name: display interfaces
