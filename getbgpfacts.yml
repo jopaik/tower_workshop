@@ -13,7 +13,7 @@
   - name: set bgp facts
     ansible.builtin.set_fact:
       bgp_asnumber: "65002"
-      cacheable: yes
+    cacheable: yes
 
   - name: display interfaces
     ansible.builtin.debug:
