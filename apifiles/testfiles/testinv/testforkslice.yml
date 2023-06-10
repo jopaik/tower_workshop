@@ -1,6 +1,8 @@
 ---
 - name: test slicing and fork
   hosts: all
+  strategy: host_pinned
+  serial: 1
   gather_facts: no
 
   tasks:
