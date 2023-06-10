@@ -10,9 +10,10 @@
       ansible.builtin.debug:
         msg: "Pre-task"
     
-    - name: Pause
-      ansible.builtin.pause:
-        seconds: 10
+    - name: Pause for 10 sec
+      wait_for:
+        timeout: 10
+      delegate_to: localhost
     
     - name: Print post-task
       ansible.builtin.debug:
