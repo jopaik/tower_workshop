@@ -1,6 +1,8 @@
 ---
 - hosts: all
   gather_facts: False
+  vars:
+    testvar: "success"
   tasks:
     - name: Start WAS
       debug:
@@ -35,11 +37,16 @@
     - name: block tag always         
       block:
         - name: 1st task in always block 
-          debug: 
-            msg: "1st Task in Always Block"
+          assert:
+            that:
+              - testvar == "success"
+            success_msg: "success"
+            fail_msg: "failed"
+          register: result
           tags: always
         
         - name: 2nd task in always block
           debug:
             msg: "2nd Task in Always Block"
+          when: result.failed == True
           tags: ["never", "alwaysblocktask2"]
