@@ -31,3 +31,15 @@
           debug:
             msg: "2nd Task in Block"
           tags: blocktask2
+              - name: block tag demo
+    - name: block tag always         
+      block:
+        - name: 1st task in always block 
+          debug: 
+            msg: "1st Task in Always Block"
+          tags: always
+        
+        - name: 2nd task in always block
+          debug:
+            msg: "2nd Task in Always Block"
+          tags: ["never", "alwaysblocktask2"]
