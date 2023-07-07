@@ -31,7 +31,7 @@
           debug:
             msg: "2nd Task in Block"
           tags: blocktask2
-              - name: block tag demo
+
     - name: block tag always         
       block:
         - name: 1st task in always block 
