@@ -19,3 +19,15 @@
         msg: "Restart WAS for {{ inventory_hostname }}"
       tags:
         - wasrestart
+
+    - name: block tag demo
+      block:
+        - name: 1st task in block 
+          debug: 
+            msg: "1st Task in Block"
+          tags: blocktask1
+        
+        - name: 2nd task in block
+          debug:
+            msg: "2nd Task in Block"
+          tags: blocktask2

@@ -6,5 +6,6 @@
             "file:///Users/joonpaik/git/joon/tower_workshop/cliparse.yml",
             "file:///Users/joonpaik/git/joon/tower_workshop/comp_demo_banner.yml"
         ]
-    }
+    },
+    "ansible.python.interpreterPath": "/Users/joonpaik/.pyenv/versions/3.8.2/bin/python"
 }
