@@ -1,8 +1,8 @@
 ---
-- hosts: all
+- hosts: localhost
   gather_facts: False
   vars:
-    testvar: "success"
+    testvar: "failed"
   tasks:
     - name: Start WAS
       debug:
@@ -50,3 +50,11 @@
             msg: "2nd Task in Always Block"
           when: result.failed == True
           tags: ["never", "alwaysblocktask2"]
+
+        - name: 3rd task in always block
+          debug:
+            msg: "3rd Task in Always Block"
+          when: result is failed
+          tags: ["never", "alwaysblocktask3"]
+      
+      ignore_errors: True
