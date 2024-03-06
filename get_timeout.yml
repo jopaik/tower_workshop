@@ -1,0 +1,9 @@
+---
+- name: Get command_timeout
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Get command_timeout
+      debug:
+        msg: "This is command timeout value {{command_timeout}}"
