@@ -15,5 +15,4 @@
     
     - name: Use Custom timeout
       ansible.builtin.command:
-        cmd: "echo This is Custom Host Timeout var"
-      timeout: custom_host_timeout
+        cmd: "echo This is Custom Host Timeout var {{ custom_host_timeout }}"
