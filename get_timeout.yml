@@ -8,6 +8,9 @@
       debug:
         msg: "This is command timeout value {{ command_timeout }}"
 
-    - name: Get session_timeout
+
+    - name: Get Custom host timeout
       debug:
-        msg: "This is session timeout value {{ session_timeout }}"
+        msg: "This is custom host timeout value {{ custom_host_timeout }}"
+      timeout: custom_host_timeout
+      

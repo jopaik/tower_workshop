@@ -1,1 +1,1 @@
-ANSIBLE_PERSISTENT_COMMAND_TIMEOUT: 33
+custom_host_timeout: 33
