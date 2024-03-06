@@ -8,5 +8,5 @@ server7 ansible_host=127.0.0.1
 server8 ansible_host=127.0.0.1
 server9 ansible_host=127.0.0.1
 server10 ansible_host=127.0.0.1
-host1 ansible_host=127.0.0.1 custom_host_timeout=33 command_timeout=33
-host2 ansible_host=127.0.0.1 custom_host_timeout=44 command_timeout=44
+host1 ansible_host=127.0.0.1 custom_host_timeout=33 ansible_command_timeout=33
+host2 ansible_host=127.0.0.1 custom_host_timeout=44 ansible_command_timeout=44
