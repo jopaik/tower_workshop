@@ -6,7 +6,7 @@
   tasks:
     - name: Get command_timeout
       debug:
-        msg: "This is command timeout value {{ ansible_command_timeout }}"
+        msg: "This is command timeout value {{ ansible_command_timeout | default(30) }}"
 
 
     - name: Get Custom host timeout
