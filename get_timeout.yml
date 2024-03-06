@@ -6,4 +6,4 @@
   tasks:
     - name: Get command_timeout
       debug:
-        msg: "This is command timeout value {{ ANSIBLE_PERSISTENT_COMMAND_TIMEOUT }}"
+        msg: "This is command timeout value {{ ANSIBLE_COMMAND_TIMEOUT }}"
