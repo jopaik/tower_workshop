@@ -4,11 +4,10 @@
   gather_facts: no
 
   tasks:
-    # - name: Get command_timeout
-    #   debug:
-    #     msg: "This is command timeout value {{ COMMAND_TIMEOUT }}"
-
-    - name: Display all variables/facts known for a host
+    - name: Get command_timeout
       debug:
-        var: vars
-      tags: debug_info
+        msg: "This is command timeout value {{ command_timeout }}"
+
+    - name: Get session_timeout
+      debug:
+        msg: "This is session timeout value {{ session_timeout }}"
