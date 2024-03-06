@@ -6,4 +6,4 @@
   tasks:
     - name: Get command_timeout
       debug:
-        msg: "This is command timeout value {{command_timeout}}"
+        msg: "This is command timeout value {{ command_timeout }}"
