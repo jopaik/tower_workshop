@@ -13,7 +13,13 @@
       debug:
         msg: "This is custom host timeout value {{ custom_host_timeout | default(30) }}"
     
-    - name: Use Custom timeout
+    - name: Use Custom Host timeout
       ansible.builtin.command:
         cmd: "echo This is Custom Host Timeout var {{ custom_host_timeout | default(30) }}"
       timeout: "{{ custom_host_timeout | default(30) | int }}"
+
+    - name: Use Custom Host Async
+      ansible.builtin.command:
+        cmd: "echo This is Custom Host Async var {{ custom_host_async | default(30) }} Poll var {{ custom_host_poll | default(5) }}"
+      async: "{{ custom_host_async | default(30) | int }}"
+      poll: "{{ custom_host_poll | default(5) | int }}"

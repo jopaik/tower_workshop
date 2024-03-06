@@ -1,3 +1,3 @@
 server1 ansible_host=192.168.67.20
-host1 ansible_host=192.168.67.20 custom_host_timeout=33 ansible_command_timeout=33
-host2 ansible_host=192.168.67.20 custom_host_timeout=44 ansible_command_timeout=44
+host1 ansible_host=192.168.67.20 custom_host_timeout=33 ansible_command_timeout=33 custom_host_async=33 custom_host_poll=3
+host2 ansible_host=192.168.67.20 custom_host_timeout=44 ansible_command_timeout=44 custom_host_async=44 custom_host_poll=4
