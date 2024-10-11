@@ -4,8 +4,8 @@
   gather_facts: false
 
   tasks:
-    - name: display interfaces
+    - name: display fact cache
       debug:
         msg:
           - "IOS Serial number : {{ ansible_net_serialnum }}"
-          - "The IOS Interfaces: {{ ansible_net_interfaces }}"
+          - "The IOS version: {{ ansible_net_version }}"

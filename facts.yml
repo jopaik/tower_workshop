@@ -9,7 +9,7 @@
 
     - name: display ios
       debug:
-        msg: "IOS Interfaces {{ ansible_net_interfaces }}"
+        msg: "IOS version {{ ansible_net_version }}"
 
     - name: Custom facts
       set_fact:
