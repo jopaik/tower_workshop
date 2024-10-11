@@ -1,3 +1,4 @@
+no ip name-server vrf
 {% for item in dns_servers %}
 ip name-server {{ item }}
 {% endfor %}
