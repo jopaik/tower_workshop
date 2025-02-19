@@ -1,5 +1,5 @@
 
-- hosts: localhost
+- hosts: all
 
   tasks:
   - name: Test that my hello_world module works
