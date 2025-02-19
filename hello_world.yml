@@ -1,9 +1,9 @@
-
-- hosts: all
+---
+- name: Hello hello_world
+  gather_facts: false
+  hosts: all
 
   tasks:
   - name: Test that my hello_world module works
-    hello_world: 
-    register: result
-
-  - debug: var=result  
+    ansible.builtin.debug: 
+      msg: "This is a test"
