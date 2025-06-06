@@ -1,0 +1,15 @@
+---
+- name: No Log demo
+  gather_facts: false
+  hosts: localhost
+
+  tasks:
+  - name: Test that this shows in logs
+    ansible.builtin.debug: 
+      msg: "This is my secret"
+
+  - name: Test that this does not shows in logs
+    ansible.builtin.debug: 
+      msg: "This is my secret in debug"
+    no_log: True
+
