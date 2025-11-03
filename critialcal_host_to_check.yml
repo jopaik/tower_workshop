@@ -1,0 +1,19 @@
+---
+- name: Inventory Host Check
+  hosts: localhost # Run this check on the controller or 'localhost'
+  gather_facts: no
+
+  vars:
+    # Define the name of the host you want to check for
+    target_host: "critical-prod1-server"
+
+  tasks:
+    - name: Fail if target host is found in inventory
+      ansible.builtin.assert:
+        # The success condition is: the 'target_host' name is NOT in the list of all inventory hosts.
+        that:
+          - target_host not in groups.all
+        fail_msg: "FATAL: The host '{{ target_host }}' was found in the Ansible inventory. Aborting playbook execution as required."
+        success_msg: "SUCCESS: The host '{{ target_host }}' was NOT found in the inventory. Continuing playbook execution."
+      # Set run_once to ensure the check executes only once, regardless of the 'hosts' target
+      run_once: true
