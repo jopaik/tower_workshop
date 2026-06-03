@@ -10,4 +10,6 @@ cisco04 ansible_host=127.0.0.1  topology=leaf location=emea
 
 [my-own-group-2]
 arista01  ansible_host=127.0.0.1   topology=leaf location=na
+
+[my-own-group-3]
 arista04 ansible_host=127.0.0.1  topology=leaf location=emea
