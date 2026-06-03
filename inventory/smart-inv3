@@ -3,7 +3,11 @@ nxos01  ansible_host=127.0.0.1 topology=spine location=na
 nxos04 ansible_host=127.0.0.1 topology=spine location=emea
 iosxr01 ansible_host=127.0.0.1  topology=wan location=na
 iosxr04 ansible_host=127.0.0.1  topology=wan location=emea
+
+[my-own-group-1]
 cisco01 ansible_host=127.0.0.1  topology=leaf location=na
 cisco04 ansible_host=127.0.0.1  topology=leaf location=emea
+
+[my-own-group-2]
 arista01  ansible_host=127.0.0.1   topology=leaf location=na
 arista04 ansible_host=127.0.0.1  topology=leaf location=emea
