@@ -1,15 +1,18 @@
 [my-own-group]
-nxos01  ansible_host=127.0.0.1 topology=spine location=na
-nxos04 ansible_host=127.0.0.1 topology=spine location=emea
-iosxr01 ansible_host=127.0.0.1  topology=wan location=na
-iosxr04 ansible_host=127.0.0.1  topology=wan location=emea
+nxos01  ansible_host=127.0.0.1 topology=spine location=na  app_code=123
+nxos04 ansible_host=127.0.0.1 topology=spine location=emea app_code=123
+iosxr01 ansible_host=127.0.0.1  topology=wan location=na app_code=123
+iosxr04 ansible_host=127.0.0.1  topology=wan location=emea app_code=123
 
 [my-own-group-1]
-cisco01 ansible_host=127.0.0.1  topology=leaf location=na
-cisco04 ansible_host=127.0.0.1  topology=leaf location=emea
+cisco01 ansible_host=127.0.0.1  topology=leaf location=na app_code=123
+cisco04 ansible_host=127.0.0.1  topology=leaf location=emea app_code=123
 
 [my-own-group-2]
-arista01  ansible_host=127.0.0.1   topology=leaf location=na
+arista01  ansible_host=127.0.0.1   topology=leaf location=na app_code=123
 
 [my-own-group-3]
-arista04 ansible_host=127.0.0.1  topology=leaf location=emea
+arista04 ansible_host=127.0.0.1  topology=leaf location=emea app_code=123
+
+[my-own-group-4]
+arista05 ansible_host=127.0.0.1  topology=leaf location=emea app_code=321

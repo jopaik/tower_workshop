@@ -1,11 +1,11 @@
 [nxos]
-nxos01  ansible_host=127.0.0.1 topology=spine location=na
-nxos02 ansible_host=127.0.0.1 topology=spine  location=na
-nxos03 ansible_host=127.0.0.1 topology=spine location=emea
-nxos04 ansible_host=127.0.0.1 topology=spine location=emea
+nxos01  ansible_host=127.0.0.1 topology=spine location=na app_code=123
+nxos02 ansible_host=127.0.0.1 topology=spine  location=na app_code=123
+nxos03 ansible_host=127.0.0.1 topology=spine location=emea app_code=123
+nxos04 ansible_host=127.0.0.1 topology=spine location=emea app_code=123
 
 [iosxr]
-iosxr01 ansible_host=127.0.0.1  topology=wan location=na
-iosxr02 ansible_host=127.0.0.1  topology=wan location=na
-iosxr03 ansible_host=127.0.0.1  topology=wan location=emea
-iosxr04 ansible_host=127.0.0.1  topology=wan location=emea
+iosxr01 ansible_host=127.0.0.1  topology=wan location=na app_code=123
+iosxr02 ansible_host=127.0.0.1  topology=wan location=na app_code=123
+iosxr03 ansible_host=127.0.0.1  topology=wan location=emea app_code=123
+iosxr04 ansible_host=127.0.0.1  topology=wan location=emea app_code=123
