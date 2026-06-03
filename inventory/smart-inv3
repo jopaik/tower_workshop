@@ -1,0 +1,9 @@
+[my-own-group]
+nxos01  ansible_host=127.0.0.1 topology=spine location=na
+nxos04 ansible_host=127.0.0.1 topology=spine location=emea
+iosxr01 ansible_host=127.0.0.1  topology=wan location=na
+iosxr04 ansible_host=127.0.0.1  topology=wan location=emea
+cisco01 ansible_host=127.0.0.1  topology=leaf location=na
+cisco04 ansible_host=127.0.0.1  topology=leaf location=emea
+arista01  ansible_host=127.0.0.1   topology=leaf location=na
+arista04 ansible_host=127.0.0.1  topology=leaf location=emea
