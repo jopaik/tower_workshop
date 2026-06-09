@@ -11,5 +11,9 @@ cisco04 ansible_host=127.0.0.1  topology=leaf location=emea app_code=123
 [my-own-group-2]
 arista01  ansible_host=127.0.0.1   topology=leaf location=na app_code=123
 
-[my-own-group-3]
+[my-own-group-4]
 arista04 ansible_host=127.0.0.1  topology=leaf location=emea app_code=123
+stephen01 ansible_host=127.0.0.1 app_code=321
+
+[everyone]
+stephen02 ansible_host=127.0.0.1 app_code=222
