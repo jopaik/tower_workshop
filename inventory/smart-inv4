@@ -1,0 +1,4 @@
+
+[everyone]
+stephen02 ansible_host=127.0.0.1 app_code=222
+stephen01 ansible_host=127.0.0.1 app_code=444
