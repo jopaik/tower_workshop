@@ -1,0 +1,9 @@
+---
+- name: Output Survy Name and Value
+  gather_facts: false
+  hosts: all
+
+  tasks:
+  - name: Test that my hello_world module works
+    ansible.builtin.debug: 
+      msg: "Suvery Name: {{ survey_name | default('switch0') }} Survey Value: {{ survey_value | default('My Output 0') }}"

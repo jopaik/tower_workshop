@@ -1,0 +1,14 @@
+---
+- name: AO var test start
+  gather_facts: false
+  hosts: all
+  
+  vars:
+    ao_var_test_list:
+      - {switch_name: "Switch1", survey_value: "My Output 1"}
+      - {switch_name: "Switch2", survey_value: "My Output 2"}
+      - {switch_name: "Switch3", survey_value: "My Output 3"}
+  tasks:
+  - name: Test that my hello_world module works
+    ansible.builtin.debug: 
+      var: ao_var_test_list
