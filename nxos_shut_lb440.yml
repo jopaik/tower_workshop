@@ -1,0 +1,13 @@
+---
+- name: Shutdown Loopback440 Interface on NX-OS
+  hosts: nxos_switches
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: Ensure Loopback440 is administratively down
+      cisco.nxos.nxos_interfaces:
+        config:
+          - name: Loopback440
+            enabled: false
+        state: merged
