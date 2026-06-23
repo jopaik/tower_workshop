@@ -5,7 +5,7 @@
   connection: network_cli
 
   tasks:
-    - name: Ensure Loopback440 is administratively down
+    - name: Ensure Loopback440 is administratively up
       cisco.nxos.nxos_interfaces:
         config:
           - name: Loopback440
