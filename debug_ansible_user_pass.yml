@@ -1,0 +1,13 @@
+---
+- name: Debug Ansible User and Password Variables
+  hosts: all
+  gather_facts: false  # Fast execution, doesn't require a successful login yet
+  
+  tasks:
+    - name: Dump Connection Credentials
+      ansible.builtin.debug:
+        msg:
+          - "Configured User (ansible_user): {{ ansible_user | default('NOT DEFINED (using local system user)') }}"
+          - "Configured Password (ansible_password): {{ ansible_password | default('NOT DEFINED') }}"
+          - "Configured Become User (ansible_become_user): {{ ansible_become_user | default('root') }}"
+          - "Configured Become Password (ansible_become_password): {{ ansible_become_password | default('NOT DEFINED') }}"
