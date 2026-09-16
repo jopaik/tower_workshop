@@ -3,8 +3,7 @@ nxos01  ansible_host=127.0.0.1 topology=spine location=na  app_code=123
 nxos04 ansible_host=127.0.0.1 topology=spine location=emea app_code=123
 iosxr01 ansible_host=127.0.0.1  topology=wan location=na app_code=123
 iosxr04 ansible_host=127.0.0.1  topology=wan location=emea app_code=123
-stephen01 ansible_host=127.0.0.1 app_code=123
-stephen02 ansible_host=127.0.0.1 app_code=222
+
 
 [my-own-group-1]
 cisco01 ansible_host=127.0.0.1  topology=leaf location=na app_code=123
